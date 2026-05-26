@@ -1,0 +1,1 @@
+name: aakash_terminal\\n\\ndescription: My AI-powered PocketClaw feature\\n\\npublish_to: \"none\"\\nversion: \"0.1.0\"\\n\\nenvironment:\\n  sdk: \">=2.19.0 <4.0.0\"\\n\\ndependencies:\\n    flutter:\\n      sdk: flutter\\n\\ndev_dependencies:\\n  flutter_test:\\n    sdk: flutter\\n  flutter_lints: ^2.0.0

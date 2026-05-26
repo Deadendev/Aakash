@@ -11,27 +11,22 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      # 1️⃣ Checkout the repository
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2️⃣ Set up Flutter (stable channel)
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
           channel: stable
-          flutter-version: '3.22.0'   # adjust if you use a different version
+          flutter-version: '3.22.0'
           cache: true
 
-      # 3️⃣ Install dependencies and build the APK
       - name: Build APK
         run: |
           flutter pub get
-          flutter build apk --release   # produces an unsigned APK; use --release for a production build
+          flutter build apk --release
 
-      # 4️⃣ Upload the APK as a workflow artifact
       - name: Upload APK artifact
         uses: actions/upload-artifact@v3
         with:
